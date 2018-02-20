@@ -40,7 +40,7 @@ public class MinMaxTemp {
 			for (Text minMaxT : values) {
 				String minMax = minMaxT.toString();
 				if (minMax.contains(",")) {
-					if ((Float.valueOf((minMax.split(",")[0])) > 40)
+					if ((Float.valueOf((minMax.split(",")[0])) > 15)
 							&& (Float.valueOf((minMax.split(",")[1])) < 10)) {
 						context.write(key, new Text((minMax.split(",")[0])
 								+ " " + (minMax.split(",")[1])));
